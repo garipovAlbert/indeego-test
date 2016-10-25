@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\search\EmployeeSearch;
+use Yii;
 use yii\web\Controller;
 
 /**
@@ -25,7 +27,13 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new EmployeeSearch();
+        $provider = $searchModel->search(Yii::$app->request->get());
+
+        return $this->render('index', [
+            'dataProvider' => $provider,
+            'searchModel' => $searchModel,
+        ]);
     }
 
 }
