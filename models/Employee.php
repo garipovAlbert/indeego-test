@@ -28,7 +28,7 @@ class Employee extends BaseEmployee
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'Name'),
+            'name' => Yii::t('app', 'Last Name'),
             'isInPlace' => Yii::t('app', 'In Place'),
         ];
     }

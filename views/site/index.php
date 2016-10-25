@@ -35,6 +35,7 @@ echo GridView::widget([
         ],
         [
             'attribute' => 'groupId',
+            'header' => Yii::t('app', 'Groups'),
             'filter' => Group::getList(),
             'value' => function($model) {
                 return join(', ', ArrayHelper::getColumn($model->groups, 'name'));
@@ -42,6 +43,7 @@ echo GridView::widget([
         ],
         [
             'attribute' => 'skillId',
+            'header' => Yii::t('app', 'Skills'),
             'filter' => Skill::getList(),
             'value' => function($model) {
                 return join(', ', ArrayHelper::getColumn($model->skills, 'name'));

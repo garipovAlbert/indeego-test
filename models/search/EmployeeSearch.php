@@ -49,17 +49,6 @@ class EmployeeSearch extends Employee
     }
 
     /**
-     * @inheritdoc
-     */
-    public function attributeLabels()
-    {
-        return array_replace(parent::attributeLabels(), [
-            'groupId' => Yii::t('app', 'Group'),
-            'skillId' => Yii::t('app', 'Skill'),
-        ]);
-    }
-
-    /**
      * @param array $params
      * @param string $formName
      * @return ActiveDataProvider
